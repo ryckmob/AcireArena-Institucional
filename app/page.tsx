@@ -1,5 +1,3 @@
-import { Whatsapp, Download } from "lucide-react";
-
 async function baixarExe() {
   const apiUrl = "https://api.github.com/repos/ryckmob/Acire-Auto-Completo/contents/locacao-veiculos-frontend/build/bin/locacao-veiculos-frontend.exe";
   
@@ -37,20 +35,21 @@ export default function Home() {
 
         <div className="mt-10 flex gap-4">
           <button 
-            onClick={baixarExe} 
-            className="flex items-center gap-2 px-8 py-3 rounded-xl bg-amber-500 text-neutral-900 font-medium hover:bg-amber-400 transition"
-          >
-            <Download size={20} /> Baixar Sistema Acire Auto
-          </button>
+          onClick={baixarExe} 
+          className="flex items-center gap-2 px-8 py-3 rounded-xl bg-amber-500 text-neutral-900 font-medium hover:bg-amber-400 transition"
+        >
+          ⬇️ Baixar Sistema Acire Auto
+        </button>
+        
+        <a 
+          href="https://wa.me/86994059642" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-8 py-3 rounded-xl border border-neutral-700 hover:border-neutral-500 transition"
+        >
+          💬 Whatsapp
+        </a>
 
-          <a 
-            href="https://wa.me/86994059642" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-8 py-3 rounded-xl border border-neutral-700 hover:border-neutral-500 transition"
-          >
-            <Whatsapp size={20} /> Whatsapp
-          </a>
         </div>
       </section>
 
