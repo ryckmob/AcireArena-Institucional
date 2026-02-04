@@ -29,11 +29,17 @@ export default function Home() {
 
         <div className="mt-10 flex gap-4">
           <button className="px-8 py-3 rounded-xl bg-amber-500 text-neutral-900 font-medium hover:bg-amber-400 transition">
-            Fazer Download
+            Baixar Sistema Acire Auto
           </button>
-          <button className="px-8 py-3 rounded-xl border border-neutral-700 hover:border-neutral-500 transition">
-            Ver eventos
-          </button>
+          <a 
+            href="https://wa.me/86994059642" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-8 py-3 rounded-xl border border-neutral-700 hover:border-neutral-500 transition"
+          >
+            <Whatsapp size={20} /> Whatsapp
+          </a>
+
         </div>
       </section>
 
