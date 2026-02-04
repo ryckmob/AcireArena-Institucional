@@ -20,17 +20,16 @@ export default function Home() {
 
       <section className="flex flex-col items-center justify-center text-center px-6 py-32">
         <h2 className="text-5xl font-bold max-w-3xl leading-tight">
-          Agende o seu evento com as menores taxas do mercado
+          O Acire Auto é um sistema completo para gerenciamento de locação de veículos.
         </h2>
 
         <p className="mt-6 max-w-xl text-neutral-400 text-lg">
-          Venda ingressos com controle total, repasse rápido e uma experiência
-          simples para você e para o público.
+          Pensado e desenvolvido para facilitar o dia a dia de empresas de aluguel de carros e utilitários.
         </p>
 
         <div className="mt-10 flex gap-4">
           <button className="px-8 py-3 rounded-xl bg-amber-500 text-neutral-900 font-medium hover:bg-amber-400 transition">
-            Criar evento
+            Fazer Download
           </button>
           <button className="px-8 py-3 rounded-xl border border-neutral-700 hover:border-neutral-500 transition">
             Ver eventos
