@@ -1,17 +1,3 @@
-import { Download } from "lucide-react";
-
-async function baixarExe() {
-  const apiUrl = "https://api.github.com/repos/ryckmob/Acire-Auto-Completo/contents/locacao-veiculos-frontend/build/bin/locacao-veiculos-frontend.exe";
-  
-  const resposta = await fetch(apiUrl);
-  const dados = await resposta.json();
-  
-  const link = document.createElement('a');
-  link.href = dados.download_url;
-  link.download = "locacao-veiculos-frontend.exe";
-  link.click();
-}
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
@@ -43,11 +29,8 @@ export default function Home() {
         </p>
 
         <div className="mt-10 flex gap-4">
-          <button 
-            onClick={baixarExe} 
-            className="flex items-center gap-2 px-8 py-3 rounded-xl bg-amber-500 text-neutral-900 font-medium hover:bg-amber-400 transition"
-          >
-            <Download size={20} /> Baixar
+          <button className="px-8 py-3 rounded-xl bg-amber-500 text-neutral-900 font-medium hover:bg-amber-400 transition">
+            Criar evento
           </button>
           <button className="px-8 py-3 rounded-xl border border-neutral-700 hover:border-neutral-500 transition">
             Ver eventos
