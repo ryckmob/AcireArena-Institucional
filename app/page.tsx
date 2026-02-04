@@ -1,3 +1,17 @@
+import { Whatsapp, Download } from "lucide-react";
+
+async function baixarExe() {
+  const apiUrl = "https://api.github.com/repos/ryckmob/Acire-Auto-Completo/contents/locacao-veiculos-frontend/build/bin/locacao-veiculos-frontend.exe";
+  
+  const resposta = await fetch(apiUrl);
+  const dados = await resposta.json();
+  
+  const link = document.createElement('a');
+  link.href = dados.download_url;
+  link.download = "locacao-veiculos-frontend.exe";
+  link.click();
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
@@ -6,15 +20,9 @@ export default function Home() {
           Acire <span className="text-amber-500">Arena</span>
         </h1>
         <nav className="space-x-8 text-sm text-neutral-300">
-          <a href="#" className="hover:text-white">
-            Eventos
-          </a>
-          <a href="#" className="hover:text-white">
-            Como funciona
-          </a>
-          <a href="#" className="hover:text-white">
-            Entrar
-          </a>
+          <a href="#" className="hover:text-white">Eventos</a>
+          <a href="#" className="hover:text-white">Como funciona</a>
+          <a href="#" className="hover:text-white">Entrar</a>
         </nav>
       </header>
 
@@ -28,9 +36,13 @@ export default function Home() {
         </p>
 
         <div className="mt-10 flex gap-4">
-          <button className="px-8 py-3 rounded-xl bg-amber-500 text-neutral-900 font-medium hover:bg-amber-400 transition">
-            Baixar Sistema Acire Auto
+          <button 
+            onClick={baixarExe} 
+            className="flex items-center gap-2 px-8 py-3 rounded-xl bg-amber-500 text-neutral-900 font-medium hover:bg-amber-400 transition"
+          >
+            <Download size={20} /> Baixar Sistema Acire Auto
           </button>
+
           <a 
             href="https://wa.me/86994059642" 
             target="_blank" 
@@ -39,7 +51,6 @@ export default function Home() {
           >
             <Whatsapp size={20} /> Whatsapp
           </a>
-
         </div>
       </section>
 
@@ -47,8 +58,7 @@ export default function Home() {
         <div className="rounded-2xl bg-neutral-900 p-8">
           <h3 className="text-xl font-semibold">Taxas justas</h3>
           <p className="mt-3 text-neutral-400">
-            Você fica com o lucro. A Acire Arena opera com uma das menores taxas
-            do mercado.
+            Você fica com o lucro. A Acire Arena opera com uma das menores taxas do mercado.
           </p>
         </div>
 
