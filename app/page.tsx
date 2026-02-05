@@ -1,3 +1,4 @@
+"use client";
 async function baixarExe() {
   const apiUrl = "https://api.github.com/repos/ryckmob/Acire-Auto-Completo/contents/locacao-veiculos-frontend/build/bin/locacao-veiculos-frontend.exe";
   
