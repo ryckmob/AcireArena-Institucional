@@ -56,27 +56,45 @@ export default function Home() {
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-8 px-10 pb-32">
-        <div className="rounded-2xl bg-neutral-900 p-8">
-          <h3 className="text-xl font-semibold">Taxas justas</h3>
-          <p className="mt-3 text-neutral-400">
-            Você fica com o lucro. A Acire Arena opera com uma das menores taxas do mercado.
-          </p>
-        </div>
+      <div className="rounded-2xl bg-neutral-900 p-8">
+        <h3 className="text-xl font-semibold">Veículos</h3>
+        <p className="mt-3 text-neutral-400">
+          Controle todos os veículos cadastrados, acompanhando disponibilidade e manutenção.
+        </p>
+      </div>
+    
+      <div className="rounded-2xl bg-neutral-900 p-8">
+        <h3 className="text-xl font-semibold">Clientes</h3>
+        <p className="mt-3 text-neutral-400">
+          Gerencie clientes mantendo histórico de locações e informações de contato sempre à mão.
+        </p>
+      </div>
+    
+      <div className="rounded-2xl bg-neutral-900 p-8">
+        <h3 className="text-xl font-semibold">Locações</h3>
+        <p className="mt-3 text-neutral-400">
+          Registre locações ativas e passadas com controle de prazos e pagamentos.
+        </p>
+      </div>
+    
+      <div className="rounded-2xl bg-neutral-900 p-8">
+        <h3 className="text-xl font-semibold">Relatórios</h3>
+        <p className="mt-3 text-neutral-400">
+          Gere relatórios de receita mensal e desempenho da frota de forma rápida e prática.
+        </p>
+      </div>
+    </section>
 
-        <div className="rounded-2xl bg-neutral-900 p-8">
-          <h3 className="text-xl font-semibold">Gestão simples</h3>
-          <p className="mt-3 text-neutral-400">
-            Crie, edite e acompanhe seus eventos em tempo real, sem burocracia.
-          </p>
-        </div>
-
-        <div className="rounded-2xl bg-neutral-900 p-8">
-          <h3 className="text-xl font-semibold">Ingressos digitais</h3>
-          <p className="mt-3 text-neutral-400">
-            Check in rápido com QR Code e menos dor de cabeça na portaria.
-          </p>
-        </div>
+      <section className="bg-amber-200 py-32 flex flex-col items-center justify-center text-center px-6">
+        <h2 className="text-4xl text-black max-w-2xl leading-snug">
+          Simples, rápido e confiável
+        </h2>
+        <p className="mt-4 text-lg font-milena text-black max-w-xl">
+          Gerencie sua frota e locações com facilidade, sem complicação.
+        </p>
       </section>
+
+
 
       <footer className="border-t border-neutral-800 py-6 text-center text-neutral-500 text-sm">
         © {new Date().getFullYear()} Acire Arena. Todos os direitos reservados.
