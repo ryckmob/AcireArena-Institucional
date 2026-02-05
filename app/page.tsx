@@ -1,12 +1,13 @@
 "use client";
+
 async function baixarExe() {
-  const apiUrl = "https://api.github.com/repos/ryckmob/Acire-Auto-Completo/contents/locacao-veiculos-frontend/build/bin/locacao-veiculos-frontend.exe";
-  
-  const resposta = await fetch(apiUrl);
-  const dados = await resposta.json();
-  
+  const url = "https://github.com/ryckmob/Acire-Auto-Completo/raw/refs/heads/main/locacao-veiculos-frontend/build/bin/locacao-veiculos-frontend.exe";
+
+  const resposta = await fetch(url);
+  const blob = await resposta.blob();
+
   const link = document.createElement('a');
-  link.href = dados.download_url;
+  link.href = URL.createObjectURL(blob);
   link.download = "locacao-veiculos-frontend.exe";
   link.click();
 }
